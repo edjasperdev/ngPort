@@ -1,29 +1,37 @@
 body{
-	background: grey;
 	height: 100%;
 	width: 100%;
-	text-align: center;
 }
 
 .container{
-	position: relative;
-	max-width: 1280px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: auto;
-    margin-right: auto;
+	
 	
 }
 
 .intro {
-	border: 2px black solid;
-	margin: 0 auto;	
 
 }
 
 
 #page-wrap {
-  text-align: left;
-  width: 800px;
-  margin: 0 auto;
+
 }
+
+.mainNav {
+	position: absolute;
+	right: 5%;
+	top: 1%; 
+} 
+
+.mainNav img {
+	padding: 0 10px;
+}
+
+.mainNav .BlogNav{
+	padding-right: 0;
+}
+
+.mainNav .currentNav{
+	text-color: white; 
+}
+
