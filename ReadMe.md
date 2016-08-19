@@ -5,3 +5,9 @@ TODOs
 -style about
 -style portfolio - 3 projects
 -style blog -10 posts
+
+-to install server
+npm install -g http-server
+
+-to run server
+http-server -o

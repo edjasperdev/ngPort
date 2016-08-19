@@ -30,7 +30,7 @@ app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
 /**
  * Controls all other Pages
  */
-app.controller('PageCtrl', function (/* $scope, $location, $http */) {
+app.controller('PageCtrl', function ($scope, $location, $http ) {
   console.log("Page Controller reporting for duty.");
 
   // Activates the Carousel
