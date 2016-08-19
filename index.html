@@ -5,27 +5,20 @@
 	<title>Edward Leon Jasper | Web Developer</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" ></link>
 </head>
-<body>
+<body ng-app="ngApp">
 	<div class="container">
 		<nav class="mainNav">
-			<a href="index.html"><img src="images/Home.png" alt="" class="HomeNav currentNav"></a>
-			<a href="pages/about.html"><img src="images/About.png" alt="" class="AboutNav"></a>
-			<a href="pages/port.html"><img src="images/Portfolio.png" alt="" class="PortNav"></a>
-			<a href="pages/blog.html"><img src="images/Blog.png" alt="" class="BlogNav"></a>
+			<a href="#/"> Home </a>
+			<a href="#/about">About </a>
+			<a href="#/work"> Work </a>
+			<a href="#/contact"> Contact </a>
 		</nav>
-
-		<div class="intro">
-			<h1 class="myName">XXXXXXXXXX</h1>
-			<h3>XXXXXXX | XXXXXX | XXXXXXX </h3>
-			
-				<a href="#" class= ""> New  </a>| 
-				<a href="#" class= ""> Now </a>| 
-				<a href="#" class= ""> Next </a>
-			
-		</div>
+		<div ng-view></div>
+	
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src= "js/main.js"></script>
 
