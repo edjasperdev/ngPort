@@ -34,12 +34,24 @@ app.controller('PageCtrl', function ($scope, $location, $http ) {
   console.log("Page Controller reporting for duty.");
 
   // Activates the Carousel
-  $('.carousel').carousel({
-    interval: 5000
-  });
+  // $('.carousel').carousel({
+  //   interval: 5000
+  // });
 
   // Activates Tooltips for Social Links
-  $('.tooltip-social').tooltip({
-    selector: "a[data-toggle=tooltip]"
-  })
+  // $('.tooltip-social').tooltip({
+  //   selector: "a[data-toggle=tooltip]"
+  // })
+});
+
+app.controller('PortCtrl', function ($scope) {
+ 	$scope.prevProject = function(){ 
+ 		$('.thumbnail.current').animate('current','prev', 1000, "easeIn")
+ 		$('.thumbnail').switchClass('prev','next', 1000, "easeIn")
+ 		$('.thumbnail').switchClass('next','current', 1000, "easeIn")
+  		//alert("Up Arrow");
+	}
+	$scope.nextProject = function(){ 
+  		alert("Down Arrow");
+	}
 });

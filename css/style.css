@@ -1,8 +1,11 @@
-body{
+/* General Style */
+
+
+body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Old Standard TT', serif;
-
+	overflow: hidden;
 }
 
 .container{
@@ -10,27 +13,116 @@ body{
 }
 
 h1.myName {
-
 	text-transform: uppercase;
 }
 
+/* Nav Bar */
 .mainNav {
 	position: absolute;
 	right: 5%;
 	top: 1%; 
 	font-size: 20px;
-
+	z-index: 100;
 } 
-
 .mainNav a {
 	text-decoration: none;
 }
-
-.mainNav .BlogNav{
-	padding-right: 0;
+.mainNav a:visited{
+	color: black;
 }
 
-.mainNav .currentNav{
-	text-color: white; 
+/* Home page */
+.intro {
+ 	position: absolute;
+    top: 40%;
+    text-align: right;
+    width: 100%;
+    right: 5%;
 }
 
+/* About page */
+.about {
+ 	position: absolute;
+    top: 20%;
+    text-align: right;
+    width: 50%;
+    right: 5%;
+}
+
+/* Portfolio Page */
+.port-info{
+	width: 20%;
+	top: 15%;
+    position: absolute;
+    height: 500px;
+    overflow: scroll;
+}
+.port-info h2{
+	margin: 0;
+}
+
+hr{
+	margin: 0px 100px 10px 0px;
+}
+
+
+.port-info p{
+	font-size: 12px;
+	margin-top : 0;
+	font-weight: 700;
+    font-size: 14px;position: relative;
+    left: 20px;
+}
+
+.port-nav{
+	position: fixed;
+    bottom: 0;
+}
+
+
+
+#arrow-up {
+	position: relative;
+	top: -100px;
+	left: 40px;
+	margin: 0 10px;
+ 	width: 0;
+  	height: 0;
+  	border-left: 20px solid transparent;
+  	border-right: 20px solid transparent;
+  	border-bottom: 35px solid black;
+}
+#arrow-down {
+	position: relative;
+	top: -45px;
+	left: 40px;
+  	width: 0;
+  	height: 0;
+  	border-left: 20px solid transparent;
+  	border-right: 20px solid transparent;
+  	border-top: 35px solid black;
+}
+
+.port .thumbnail{
+	position: absolute;
+    top: 15%;
+    left: 25%;
+    height: 500px;
+    width: 600px;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+	-moz-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+	box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+ }
+
+ .port .thumbnail.prev{
+ 	top: -450px;
+	background-image: linear-gradient(-180deg, #1F71D8 0%, #53C1D5 100%);
+ }
+ .port .thumbnail.current{
+	background-image: linear-gradient(-180deg, #1F71D8 0%, #9F82CE 100%);
+ }
+ .port .thumbnail.next{
+ 	top: 650px;
+	background-image: linear-gradient(-180deg, #EA053B 0%, #1F71D8 100%);
+
+ }
