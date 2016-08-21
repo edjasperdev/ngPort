@@ -1,10 +1,11 @@
 TODOs
--add links to Nav 
--center main element
+-add links to Nav  - Done 
+-get port funtionality
+-background animation
+set portfolio information
 -show pages on navCLicks
 -style about
 -style portfolio - 3 projects
--style blog -10 posts
 
 -to install server
 npm install -g http-server
