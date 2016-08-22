@@ -2,8 +2,8 @@ TODOs
 -add links to Nav  - Done 
 -get port funtionality
 -background animation
-set portfolio information
--show pages on navCLicks
+- set portfolio information
+-show pages on navCLicks - done
 -style about
 -style portfolio - 3 projects
 

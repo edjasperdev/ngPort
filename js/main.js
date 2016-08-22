@@ -21,10 +21,15 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 /**
- * Controls the Blog
+ * Controls the Nav
  */
-app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
-  console.log("Blog Controller reporting for duty.");
+app.controller('NavCtrl', function ($scope){
+  
+  $scope.navClick = function(){ 
+  		$('.mainNav a').removeClass('active');
+  		console.log($(this).text());
+  		$('this').addClass('active');
+	}
 });
 
 /**

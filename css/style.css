@@ -20,10 +20,13 @@ h1.myName {
 .mainNav {
 	position: absolute;
 	right: 5%;
-	top: 1%; 
-	font-size: 20px;
+	top: 5%; 
+	font-size: 25px;
 	z-index: 100;
 } 
+.mainNav .active {
+	opacity: .2;
+}
 .mainNav a {
 	text-decoration: none;
 }
@@ -40,6 +43,20 @@ h1.myName {
     right: 5%;
 }
 
+.mainPic{
+	width: 450px;
+}
+
+.intro .myName{
+	font-size: 40px;
+    letter-spacing: 2.5px;
+}
+
+.intro h3{
+	letter-spacing: 2px;
+    margin-top: -30px;
+}
+
 /* About page */
 .about {
  	position: absolute;
@@ -47,6 +64,10 @@ h1.myName {
     text-align: right;
     width: 50%;
     right: 5%;
+}
+
+.about h1{
+	font-size: 40px;
 }
 
 /* Portfolio Page */
@@ -73,6 +94,14 @@ hr{
     font-size: 14px;position: relative;
     left: 20px;
 }
+.port-info .techSection{
+	position: absolute;
+    top: 300px;
+}
+.port-info .linkSection{
+	position: absolute;
+    top: 400px;
+}
 
 .port-nav{
 	position: fixed;
@@ -81,17 +110,6 @@ hr{
 
 
 
-#arrow-up {
-	position: relative;
-	top: -100px;
-	left: 40px;
-	margin: 0 10px;
- 	width: 0;
-  	height: 0;
-  	border-left: 20px solid transparent;
-  	border-right: 20px solid transparent;
-  	border-bottom: 35px solid black;
-}
 #arrow-down {
 	position: relative;
 	top: -45px;
@@ -113,16 +131,25 @@ hr{
 	-moz-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
 	box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
  }
+.port .thumbnail img{
+    min-height: 500px;
+    max-width: 600px;
+}
 
  .port .thumbnail.prev{
  	top: -450px;
-	background-image: linear-gradient(-180deg, #1F71D8 0%, #53C1D5 100%);
- }
- .port .thumbnail.current{
-	background-image: linear-gradient(-180deg, #1F71D8 0%, #9F82CE 100%);
  }
  .port .thumbnail.next{
  	top: 650px;
-	background-image: linear-gradient(-180deg, #EA053B 0%, #1F71D8 100%);
+}
 
+/* Contact Page */
+ .contact{
+ 	position: absolute;
+    top: 30%;
+    text-align: center;
  }
+
+.contact p{
+	padding: 0px 50px;
+}
