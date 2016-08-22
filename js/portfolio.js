@@ -13,14 +13,14 @@ app.controller('PortCtrl', function ($scope) {
 						description: "Created Web app to organize tagging documention, with password authentication and the other fun stuff like that",
 						technology:"AngularJs, Bootstrap, Html ",
 						link: "http://barneys.com",
-						thumbnailLink:"../images/port1.jpg"
+						thumbnailLink:"images/port1.jpg"
 					 },
 					 {
 						project: "Macros App",
 						description: "Now we can all stay on track",
 						technology:"ReactJS, Node, Html ",
 						link: "http://nike.com",
-						thumbnailLink:"../images/port2.jpg"
+						thumbnailLink:"images/port2.jpg"
 
 					 },
 					 {
@@ -28,7 +28,7 @@ app.controller('PortCtrl', function ($scope) {
 						description: "are we having fun yet",
 						technology:"AngularJs, Bootstrap, Html ",
 						link: "http://barneyswarehouse.com",
-						thumbnailLink:"../images/port3.jpg"
+						thumbnailLink:"images/port3.jpg"
 					 }
 ]	
 
