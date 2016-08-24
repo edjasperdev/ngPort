@@ -10,10 +10,10 @@
 <body ng-app="ngApp">
 	<div class="container">
 		<nav class="mainNav" ng-controller="NavCtrl">
-			<a href="#/" ng-click="navClick()" class="active"> Home </a>
-			<a href="#/about" ng-click="navClick()">About </a>
-			<a href="#/work" ng-click="navClick()"> Work </a>
-			<a href="#/contact" ng-click="navClick()"> Contact </a>
+			<a href="#/" ng-class="getClass('/')"> Home </a>
+			<a href="#/about" ng-class="getClass('/about')">About </a>
+			<a href="#/work" ng-class="getClass('/work')"> Work </a>
+			<a href="#/contact" ng-class="getClass('/contact')"> Contact </a>
 		</nav>
 		<div ng-view></div>
 	

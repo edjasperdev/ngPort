@@ -23,7 +23,8 @@ h1.myName {
 	z-index: 100;
 } 
 .mainNav .active {
-	opacity: .2;
+	opacity: .3;
+	text-decoration: line-through;
 }
 .mainNav a {
 	text-decoration: none;

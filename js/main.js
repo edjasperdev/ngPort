@@ -25,11 +25,13 @@ app.config(['$routeProvider', function ($routeProvider) {
  */
 app.controller('NavCtrl', function ($scope){
   
-  $scope.navClick = function(){ 
-  		$('.mainNav a').removeClass('active');
-  		console.log($(this).text());
-  		$(this).addClass('active');
-	}
+ //  $scope.navClick = function(){ 
+ //  		$('.mainNav a').removeClass('active');
+ //  		$(this).addClass('active');
+	// }
+  $scope.getClass = function (path) {
+    return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+  }
 });
 
 /**
