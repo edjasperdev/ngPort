@@ -1,10 +1,8 @@
 /* General Style */
-
-
 body {
 	height: 100%;
 	width: 100%;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Raleway', sans-serif;
 	overflow: hidden;
 }
 
@@ -21,7 +19,7 @@ h1.myName {
 	position: absolute;
 	right: 5%;
 	top: 5%; 
-	font-size: 25px;
+	font-size: 16px;
 	z-index: 100;
 } 
 .mainNav .active {
@@ -29,10 +27,18 @@ h1.myName {
 }
 .mainNav a {
 	text-decoration: none;
+	margin: 0 10px;
+	text-transform: uppercase;
 }
 .mainNav a:visited{
 	color: black;
 }
+
+.mainNav a:hover{
+	text-decoration: line-through;
+}
+
+
 
 /* Home page */
 .intro {
@@ -45,29 +51,40 @@ h1.myName {
 
 .mainPic{
 	width: 450px;
+	   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
 
 .intro .myName{
 	font-size: 40px;
-    letter-spacing: 2.5px;
+    letter-spacing: 7px;
 }
 
 .intro h3{
 	letter-spacing: 2px;
-    margin-top: -30px;
+    margin-top: -25px;
+    font-weight: 400;
 }
 
 /* About page */
 .about {
  	position: absolute;
-    top: 20%;
+    top: 26%;
     text-align: right;
     width: 50%;
     right: 5%;
 }
 
 .about h1{
-	font-size: 40px;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.about p {
+	line-height: 23px;
 }
 
 /* Portfolio Page */
@@ -76,7 +93,7 @@ h1.myName {
 	top: 15%;
     position: absolute;
     height: 500px;
-    overflow: scroll;
+    right: 5%;
 }
 .port-info h2{
 	margin: 0;
@@ -106,6 +123,7 @@ hr{
 .port-nav{
 	position: fixed;
     bottom: 0;
+    right: 25%;
 }
 
 
@@ -124,32 +142,53 @@ hr{
 .port .thumbnail{
 	position: absolute;
     top: 15%;
-    left: 25%;
-    height: 500px;
-    width: 600px;
+    left: 5%;
+    height: 600px;
+    width: 700px;
     -webkit-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
 	-moz-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
 	box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
  }
 .port .thumbnail img{
-    min-height: 500px;
-    max-width: 600px;
+    min-height: 600px;
+    max-width: 700px;
 }
 
  .port .thumbnail.prev{
- 	top: -450px;
+ 	top: -500px;
  }
  .port .thumbnail.next{
- 	top: 650px;
+ 	top: 750px;
 }
 
 /* Contact Page */
  .contact{
  	position: absolute;
-    top: 30%;
-    text-align: center;
+    top: 26%;
+    text-align: right;
+    width: 50%;
+    right: 5%;
  }
 
-.contact p{
-	padding: 0px 50px;
+ .contact h1{
+	font-size: 30px;
+	text-transform: uppercase;
 }
+
+.contact-form input:focus, .contact-form textarea:focus {
+	outline: black auto;
+}
+.contact-form textarea {
+    width: 300px;
+    height: 150px;
+}
+.contact-form input[type=submit] {
+	padding:5px 15px; 
+	background:#ccc; 
+	border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    font-family: 'Raleway', sans-serif;
+}
+

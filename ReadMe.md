@@ -12,3 +12,6 @@ npm install -g http-server
 
 -to run server
 http-server -o
+
+move port images to the left - text to right
+contact form center

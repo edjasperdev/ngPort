@@ -28,7 +28,7 @@ app.controller('NavCtrl', function ($scope){
   $scope.navClick = function(){ 
   		$('.mainNav a').removeClass('active');
   		console.log($(this).text());
-  		$('this').addClass('active');
+  		$(this).addClass('active');
 	}
 });
 
