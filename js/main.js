@@ -1,6 +1,6 @@
 var app = angular.module('ngApp', [
   'ngRoute'
-]);
+  ]);
 
 /**
  * Configure the Routes
@@ -8,11 +8,11 @@ var app = angular.module('ngApp', [
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-    .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+    .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl", activetab: 'home'})
     // Pages
-    .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/work", {templateUrl: "partials/work.html", controller: "PageCtrl"})
-    .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
+    .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl", activetab: 'about'})
+    .when("/work", {templateUrl: "partials/work.html", controller: "PageCtrl", activetab: 'work'})
+    .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl", activetab: 'contact'})
     // Blog
     //.when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
     //.when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
@@ -23,15 +23,8 @@ app.config(['$routeProvider', function ($routeProvider) {
 /**
  * Controls the Nav
  */
-app.controller('NavCtrl', function ($scope){
-  
- //  $scope.navClick = function(){ 
- //  		$('.mainNav a').removeClass('active');
- //  		$(this).addClass('active');
-	// }
-  $scope.getClass = function (path) {
-    return ($location.path().substr(0, path.length) === path) ? 'active' : '';
-  }
+app.controller('NavCtrl', function ($scope,$route){
+  $scope.$route = $route;
 });
 
 /**

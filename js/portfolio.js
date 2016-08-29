@@ -1,12 +1,5 @@
 var app = angular.module('ngApp');
 
-var getPrevProject = function(){
-
-}
-var getNextProject = function(){
-
-}
-
 app.controller('PortCtrl', function ($scope) {
 	var portProjects = [{
 						project: "Barneys New York",
