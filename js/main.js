@@ -30,6 +30,20 @@ app.controller('NavCtrl', function ($scope,$route){
 /**
  * Controls all other Pages
  */
-app.controller('PageCtrl', function ($scope, $location, $http ) {});
+app.controller('PageCtrl', function ($scope, $location, $http, $window ) {
+  $scope.handleFormSubmit = function () {
+        $http.post('./scripts/contact_form.php').success(function (data, status) {
+             if (data.success) {
+                 $window.alert("Thank you! Your message has been sent.");
+                $scope.booking = {};
+
+                // display success message
+               $scope.$parent.message = true;
+           }      
+         }).error(function (data, status) {
+             $window.alert("Sorry, there was a problem!");
+        });
+
+});
 
 

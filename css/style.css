@@ -6,6 +6,11 @@ body {
 	overflow: hidden;
 }
 
+a{
+	text-decoration: none;
+	color: black;
+}
+
 
 .container{
 	padding: 10px;
@@ -188,17 +193,21 @@ hr{
 }
 
 /* Contact Page */
- .contact{
- 	position: absolute;
+.contact{
+	position: absolute;
     top: 26%;
     text-align: right;
     width: 50%;
     right: 5%;
- }
+}
 
- .contact h1{
+.contact h1{
 	font-size: 30px;
 	text-transform: uppercase;
+} 
+
+.contact p{
+	line-height: 20px;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
