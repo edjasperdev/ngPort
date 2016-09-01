@@ -29,22 +29,15 @@ app.controller('PortCtrl', function ($scope) {
 
 var i = 1,
     l = portProjects.length;
-
     $scope.previousProject = portProjects[i-1];
 	$scope.currentProject = portProjects[i]; 
 	$scope.upcomingProject = portProjects[i+1];
-    	console.log("current is: "+ i)
-
+	
  	$scope.nextProject = function(){ 
  		i+=1;
- 		console.log("current is: "+ i)
- 		
     	$scope.previousProject = portProjects[(i+l-1)%l];
 		$scope.currentProject = portProjects[i>l-1?i=0:i];
-		console.log("current is: "+ i)
 		$scope.upcomingProject = portProjects[(i+1)%l];
-		//i+=1;
-		console.log("current is: "+ i)
 		
  	}
 

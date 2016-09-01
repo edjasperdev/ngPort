@@ -6,6 +6,7 @@ body {
 	overflow: hidden;
 }
 
+
 .container{
 	padding: 10px;
 }
@@ -80,7 +81,7 @@ h1.myName {
 }
 
 .mainPic{
-	width: 450px;
+	max-width: 450px;
 }
 
 .intro .myName{
@@ -216,4 +217,80 @@ hr{
     border-radius: 5px; 
     font-family: 'Raleway', sans-serif;
 }
+
+
+/*Media Queries*/
+/*Tablet*/
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  	.mainPic {
+		max-width: 400px;
+	}
+
+	.intro {
+		top: 35%;
+	}
+
+	.about{
+		top: 22%;
+	}
+
+	.port .thumbnail{
+		position: absolute;
+	    top: 15%;
+	    left: 5%;
+	    height: 500px;
+	    width: 600px;
+	    -webkit-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+		-moz-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+		box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+	 }
+	.port .thumbnail img{
+	    min-height: 500px;
+	    max-width: 600px;
+	}
+
+	 .port .thumbnail.prev{
+	 	top: -400px;
+	 }
+	 .port .thumbnail.next{
+	 	top: 650px;
+	}
+}
+
+/*Mobile Portait*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) { 
+	.mainPic {
+		max-width: 540px;
+	}
+
+	.about {
+		width: 39%;
+	}
+}
+
+/*Mobile Landscape*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: landscape) { 
+	.mainPic {
+		display: none;
+	}
+
+	.about {
+		width: 50%;
+		top: 16%;
+	}
+
+	.contact {
+		top: 15%;
+	}
+}
+
+
+
 
