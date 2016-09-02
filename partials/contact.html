@@ -2,7 +2,7 @@
 	<h1>Contact</h1>
 	<p> <span class="boldedText">EMAIL</span><a href="mailto:ed@edwardleonjasper.com?Subject=Hello%friend!" target="_top">ed@edwardleonjasper.com</a> </br> <span class="boldedText">TWITTER</span><a href="http://twitter.com/edwardljasper">edwardljasper</a></p>
 
-	<form action="contact_form.php" method="post" class="contact-form" name="contact_form">
+	<form name="contact_form" ng-controller= "FormController as form" method="post" action="contact_form.php" ng-submit="contact_form.$valid && handleFormSubmit(message)" novalidate class="contact-form" >
     <div>
         <label for="name">Name</label></br>
         <input type="text" id="name" name="user_name" />
@@ -13,9 +13,13 @@
     </div>
     <div>
         <label for="msg">Message</label></br>
-        <textarea id="msg" name="user_message" >Hey Ed, you're awesome. le'ts chat!</textarea>
+        <textarea id="msg" name="user_message" >Hey Ed, you're awesome. let's chat!</textarea>
     </div>
     <input type="submit" value="Send"/>
 </form>
+
+<div ng-show="message">
+				<p>Form submitted succesfully! Thank you for contacting us. We aim to respond to all enquiries within 48hrs. </p>
+			</div>
 </div> 
 	
