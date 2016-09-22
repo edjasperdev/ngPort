@@ -1,0 +1,429 @@
+ @charset "UTF-8";
+
+/*==================================================
+01. import css
+02. fix ie10 viewport bug
+03. reset
+04. helper class
+05. preloader
+06. typography
+07. button
+08. form
+09. header
+10. menu
+11. section common
+12. intro section
+13. about section
+14. services section
+15. contact section
+16. footer
+17. plugin
+18. dark style
+19. light style
+20. responsive
+21. mobile animation reset
+==================================================*/
+
+/*==================================================
+import css
+==================================================*/
+@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic");
+
+
+/* General Style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+/*
+	height: 100%;
+	width: 100%;
+*/
+	font-family: 'Raleway', sans-serif;
+/*    background-image: linear-gradient(rgba(0,0,0,0), rgba(9,9,9,1)), url('images/homeBG.jpg');*/
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+
+.container{
+	padding: 10px;
+}
+
+h1.myName {
+	text-transform: uppercase;
+}
+
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+
+/* Nav Bar */
+.mainNav {
+	position: absolute;
+	right: 5%;
+	top: 5%; 
+	font-size: 16px;
+	z-index: 100;
+} 
+.mainNav .active {
+	opacity: .3;
+	text-decoration: line-through;
+}
+.mainNav a {
+	text-decoration: none;
+	margin: 0 10px;
+	text-transform: uppercase;
+	color: black;
+}
+.mainNav a:visited{
+	color: black;
+}
+
+.mainNav a:hover{
+	text-decoration: line-through;
+}
+
+.boldedText{
+	font-weight: 700;
+}
+
+.fade{
+	opacity: 0;
+}
+
+.in{
+	opacity: 1;
+	-webkit-transition: opacity 3s;
+    transition: opacity 3s;
+}
+
+
+
+
+/* Home page */
+.intro {
+ 	position: absolute;
+    top: 40%;
+    text-align: right;
+    width: 100%;
+    right: 5%;
+}
+
+.mainPic{
+	max-width: 350px;
+}
+
+.intro .myName{
+	font-size: 40px;
+    letter-spacing: 7px;
+}
+
+.intro h3{
+	letter-spacing: 2px;
+    margin-top: -25px;
+    font-weight: 400;
+}
+
+/* About page */
+.about {
+ 	position: absolute;
+    top: 26%;
+    text-align: right;
+    width: 50%;
+    right: 5%;
+}
+
+.about h1{
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.about p {
+	line-height: 23px;
+}
+
+/* Portfolio Page */
+.port-info{
+	width: 20%;
+	top: 15%;
+    position: absolute;
+    height: 500px;
+    right: 5%;
+}
+.port-info h2{
+	margin: 0;
+}
+
+hr{
+	margin: 0px 100px 10px 0px;
+}
+
+
+.port-info p{
+	font-size: 12px;
+	margin-top : 0;
+	font-weight: 700;
+    font-size: 14px;position: relative;
+    left: 20px;
+}
+.port-info .techSection{
+	position: absolute;
+    top: 300px;
+}
+.port-info .linkSection{
+	position: absolute;
+    top: 400px;
+}
+
+.port-nav{
+	position: fixed;
+    bottom: 0;
+    right: 25%;
+}
+
+
+
+#arrow-down {
+	position: relative;
+	top: -45px;
+	left: 40px;
+  	width: 0;
+  	height: 0;
+  	border-left: 20px solid transparent;
+  	border-right: 20px solid transparent;
+  	border-top: 35px solid black;
+}
+
+.port .thumbnail{
+	position: absolute;
+    top: 15%;
+    left: 5%;
+    height: 600px;
+    width: 700px;
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+	-moz-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+	box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+ }
+.port .thumbnail img{
+    min-height: 600px;
+    max-width: 700px;
+}
+
+ .port .thumbnail.prev{
+ 	top: -500px;
+ 	opacity: .3;
+ }
+ .port .thumbnail.next{
+ 	top: 750px;
+ 	opacity: .3;
+}
+
+/* Contact Page */
+.contact{
+	position: absolute;
+    top: 26%;
+    text-align: right;
+    width: 50%;
+    right: 5%;
+}
+
+.contact h1{
+	font-size: 30px;
+	text-transform: uppercase;
+} 
+
+.contact p{
+	line-height: 25px;
+}
+
+.contact a:hover {
+	text-decoration: line-through;
+}
+
+
+/*Media Queries*/
+/*Tablet*/
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  	.mainPic {
+		max-width: 400px;
+	}
+
+	.intro {
+		top: 35%;
+	}
+
+	.about{
+		top: 22%;
+	}
+
+	.port .thumbnail{
+		position: absolute;
+	    top: 15%;
+	    left: 5%;
+	    height: 500px;
+	    width: 600px;
+	    -webkit-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+		-moz-box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+		box-shadow: 10px 10px 15px 0px rgba(219,219,219,1);
+	 }
+	.port .thumbnail img{
+	    min-height: 500px;
+	    max-width: 600px;
+	}
+
+	 .port .thumbnail.prev{
+	 	top: -400px;
+	 }
+	 .port .thumbnail.next{
+	 	top: 650px;
+	}
+}
+
+/*Mobile Portait*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) { 
+	.mainPic {
+		max-width: 540px;
+	}
+
+	.about {
+		width: 39%;
+	}
+}
+
+/*==================================================
+preloader
+==================================================*/
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#preloader-ele {
+  /* backface hidden */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* ball */
+@-webkit-keyframes name-flying-atcha {
+  0% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+@keyframes name-flying-atcha {
+  0% {
+    -webkit-transform: scaleX(0.1);
+    transform: scaleX(0.1);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: scaleX(5);
+    transform: scaleX(5);
+    opacity: 0.0;
+  }
+}
+.name-flying-atcha {
+    background-image: url(images/EdJasper1.png);
+    position: relative;
+    -webkit-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    transform: translateY(-25px);
+    transform: scale(5);
+
+}
+
+.name-flying-atcha > div {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+      border: 2px solid;
+      -webkit-animation: ball-scale-ripple-multiple 1.25s 0s 1 cubic-bezier(0.21, 0.53, 0.56, 0.8);
+      animation: ball-scale-ripple-multiple 1.25s 0s i cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+
+
+
+
+
+
+/*Mobile Landscape*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: landscape) { 
+	.mainPic {
+		display: none;
+	}
+
+	.about {
+		width: 50%;
+		top: 16%;
+	}
+
+	.contact {
+		top: 15%;
+	}
+}
+
+
+
+
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+    
+}

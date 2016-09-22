@@ -1,0 +1,41 @@
+<section class="port">
+	<div class="port-page" ng-controller= "PortCtrl">
+		<div class= "port-info" >
+			<h2>Project</h2>
+			<hr />
+				<p class='project-title'>{{currentProject.project}}</p>
+			<div class="discSection">
+				<h2>Description</h2>
+				<hr />
+					<p> {{currentProject.description}} </p>
+			</div>
+			<div class="techSection">
+				<h2>Technology Used</h2>
+				<hr />
+					<p>{{currentProject.technology}}</p>
+			</div>
+			
+			<div class="linkSection">
+				<a href="{{currentProject.link}}"> View More</a>
+			</div>
+
+			
+		</div>
+		<div class="port-nav" >
+			<span id="arrow-down" ng-click="nextProject()"></span>
+		</div>
+		<section class='images-set'>
+			<div class="thumbnail prev"> <img src="{{previousProject.thumbnailLink}}">
+			</div>
+			<div class="thumbnail current"> <img src="{{currentProject.thumbnailLink}}"> 
+			</div>
+			<div class="thumbnail next"> <img src="{{upcomingProject.thumbnailLink}}"> 
+			</div>
+		</section>
+	
+	
+
+	
+	</div>
+
+</section> 
