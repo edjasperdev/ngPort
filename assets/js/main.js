@@ -12,9 +12,7 @@ Switch Animation
 =================================================*/
 
 function fn_switchAnimation() {
-
   $('a[data-link-to]').on('click', function(e) {
-      alert('hey');
     e.preventDefault();
     var $this = $(this);
     var $activeSection = $('section.active');
@@ -74,7 +72,7 @@ var _preloaderDelay = 500; // delay
       complete: function() {
         $('section.active')
         .velocity('stop', true)
-        .velocity('transition.slideDownIn', {duration: 2000});
+        .velocity('transition.slideDownIn', {duration: 1000});
       }
     });
   }
@@ -82,7 +80,6 @@ var _preloaderDelay = 500; // delay
 window on load
 =================================================*/
   $(window).on('load', function() {
-
     $('section').hide(); // hide all section
         fn_preloader();
 
@@ -91,9 +88,10 @@ window on load
 /*=================================================
 document on ready
 =================================================*/
-  $(document).on('ready', function() {
-    fn_switchAnimation();
-  });
+    $(document).on('ready', function() {
+        alert('hey');
+        fn_switchAnimation();
+    });
     
 })(jQuery);
 
