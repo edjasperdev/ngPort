@@ -38,12 +38,9 @@ import css
 }
 
 body {
-/*
 	height: 100%;
 	width: 100%;
-*/
 	font-family: 'Raleway', sans-serif;
-/*    background-image: linear-gradient(rgba(0,0,0,0), rgba(9,9,9,1)), url('images/homeBG.jpg');*/
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -63,11 +60,6 @@ h1.myName {
 	text-transform: uppercase;
 }
 
-.ng-hide-add, .ng-hide-remove {
-    /* ensure visibility during the transition */
-    display: block !important; /* yes, important */
-}
-
 /* Nav Bar */
 .mainNav {
 	position: absolute;
@@ -79,6 +71,7 @@ h1.myName {
 .mainNav .active {
 	opacity: .3;
 	text-decoration: line-through;
+    transition: text-decoration 5s;
 }
 .mainNav a {
 	text-decoration: none;
@@ -92,6 +85,7 @@ h1.myName {
 
 .mainNav a:hover{
 	text-decoration: line-through;
+    transition: text-decoration 5s;
 }
 
 .boldedText{
@@ -333,9 +327,8 @@ preloader
   width: 50px;
   height: 50px;
 }
-
 /* ball */
-@-webkit-keyframes name-flying-atcha {
+@-webkit-keyframes ball-scale-ripple-multiple {
   0% {
     -webkit-transform: scale(0.1);
     transform: scale(0.1);
@@ -350,45 +343,62 @@ preloader
     opacity: 0.0;
   }
 }
-@keyframes name-flying-atcha {
+@keyframes ball-scale-ripple-multiple {
   0% {
-    -webkit-transform: scaleX(0.1);
-    transform: scaleX(0.1);
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
     opacity: 1;
   }
   70% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 0.7;
   }
   100% {
-    -webkit-transform: scaleX(5);
-    transform: scaleX(5);
     opacity: 0.0;
   }
 }
-.name-flying-atcha {
-    background-image: url(images/EdJasper1.png);
-    position: relative;
-    -webkit-transform: translateY(-25px);
-    -ms-transform: translateY(-25px);
-    transform: translateY(-25px);
-    transform: scale(5);
-
+.ball-scale-ripple-multiple {
+  position: relative;
+  -webkit-transform: translateY(-25px);
+  -ms-transform: translateY(-25px);
+  transform: translateY(-25px);
+}
+.ball-scale-ripple-multiple > div:nth-child(0) {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.ball-scale-ripple-multiple > div:nth-child(1) {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.ball-scale-ripple-multiple > div:nth-child(2) {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.ball-scale-ripple-multiple > div:nth-child(3) {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+.ball-scale-ripple-multiple > div {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid;
+  -webkit-animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+  animation: ball-scale-ripple-multiple 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
 }
 
-.name-flying-atcha > div {
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+.preloader-name{
+    top: 55%;
+    /* width: 1093px; */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-      border: 2px solid;
-      -webkit-animation: ball-scale-ripple-multiple 1.25s 0s 1 cubic-bezier(0.21, 0.53, 0.56, 0.8);
-      animation: ball-scale-ripple-multiple 1.25s 0s i cubic-bezier(0.21, 0.53, 0.56, 0.8);
+    max-height: 100px;
 }
 
 

@@ -1,5 +1,4 @@
 var $ = jQuery.noConflict();
-
 (function($) {
   'use strict';
     
@@ -21,16 +20,16 @@ function fn_switchAnimation() {
     var $linkTomenuListItem = $('.mainNav').find('a[data-link-to="#' + id + '"]');
     var $preloader = $('#preloader');
     var $sectionWrap = $('.section-wrap');
-    var $menuListItem = $('#menu').find('li');
-    var $activeMenuListItem = $('#menu').find('.active');
+    var $menuListItem = $('.mainNav').find('a');
+    var $activeMenuListItem = $('.mainNav').find('.active');
 
     if (!$linkToSection.hasClass('active')) {
-      $body.removeClass('menu-in');
-      $menuListItem.velocity('transition.slideUpOut', {stagger: 80});
-      $menuWrap.velocity('stop', true)
-      .velocity('fadeOut', {
-        duration: 500
-      });
+      //$body.removeClass('menu-in');
+//      $menuListItem.velocity('transition.slideUpOut', {stagger: 80});
+//      $menuWrap.velocity('stop', true)
+//      .velocity('fadeOut', {
+//        duration: 500
+//      });
 
       $activeSection
       .velocity('stop', true)
@@ -45,6 +44,7 @@ function fn_switchAnimation() {
                 delay: 100,
                 complete: function() {
                   $linkToSection.velocity('transition.slideDownIn', {duration: 1000});
+                  //  console.log('menu change');
                   $activeSection.add($activeMenuListItem).removeClass('active');
                   $linkToSection.add($linkTomenuListItem).addClass('active');
                 }
@@ -55,12 +55,12 @@ function fn_switchAnimation() {
       });
     }
   });
-}
+} 
 
 
 /*=================================================
 preloader
-=================================================*/
+//=================================================*/
 var _preloaderDuration = 800; // duration
 var _preloaderDelay = 500; // delay
 
@@ -89,7 +89,7 @@ window on load
 document on ready
 =================================================*/
     $(document).on('ready', function() {
-        alert('hey');
+       // alert('hey');
         fn_switchAnimation();
     });
     
