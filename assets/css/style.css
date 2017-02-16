@@ -1,32 +1,3 @@
- @charset "UTF-8";
-
-/*==================================================
-01. import css
-02. fix ie10 viewport bug
-03. reset
-04. helper class
-05. preloader
-06. typography
-07. button
-08. form
-09. header
-10. menu
-11. section common
-12. intro section
-13. about section
-14. services section
-15. contact section
-16. footer
-17. plugin
-18. dark style
-19. light style
-20. responsive
-21. mobile animation reset
-==================================================*/
-
-/*==================================================
-import css
-==================================================*/
 @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic");
 
 
@@ -41,16 +12,13 @@ body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Raleway', sans-serif;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+  /*height: 100vh;*/
 }
 
 a{
 	text-decoration: none;
 	color: black;
 }
-
 
 .container{
 	padding: 10px;
@@ -64,10 +32,10 @@ h1.myName {
 .mainNav {
 	position: absolute;
 	right: 5%;
-	top: 5%; 
+	top: 5%;
 	font-size: 16px;
 	z-index: 100;
-} 
+}
 .mainNav .active {
 	opacity: .3;
 	text-decoration: line-through;
@@ -107,15 +75,20 @@ h1.myName {
 
 /* Home page */
 .intro {
- 	position: absolute;
+ 	  position: absolute;
     top: 40%;
     text-align: right;
-    width: 100%;
+    width: 50%;
     right: 5%;
 }
 
-.mainPic{
-	max-width: 350px;
+.main-pic{
+  background-size: cover;
+  width: 50%;
+}
+
+img{
+  max-height: 750px;
 }
 
 .intro .myName{
@@ -125,7 +98,7 @@ h1.myName {
 
 .intro h3{
 	letter-spacing: 2px;
-    margin-top: -25px;
+    /*margin-top: -25px;*/
     font-weight: 400;
 }
 
@@ -224,7 +197,7 @@ hr{
 }
 
 /* Contact Page */
-.contact{
+#contact{
 	position: absolute;
     top: 26%;
     text-align: right;
@@ -232,16 +205,16 @@ hr{
     right: 5%;
 }
 
-.contact h1{
+#contact h1{
 	font-size: 30px;
 	text-transform: uppercase;
-} 
+}
 
-.contact p{
+#contact p{
 	line-height: 25px;
 }
 
-.contact a:hover {
+#contact a:hover {
 	text-decoration: line-through;
 }
 
@@ -250,7 +223,7 @@ hr{
 /*Tablet*/
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  	.mainPic {
+  	.main-pic {
 		max-width: 400px;
 	}
 
@@ -286,11 +259,11 @@ hr{
 }
 
 /*Mobile Portait*/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 736px) 
-  and (orientation: portrait) { 
-	.mainPic {
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 736px)
+  and (orientation: portrait) {
+	.main-pic {
 		max-width: 540px;
 	}
 
@@ -407,11 +380,11 @@ preloader
 
 
 /*Mobile Landscape*/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 736px) 
-  and (orientation: landscape) { 
-	.mainPic {
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 736px)
+  and (orientation: landscape) {
+	.main-pic {
 		display: none;
 	}
 
@@ -435,5 +408,5 @@ section {
 
 section.active {
     display: block;
-    
+
 }

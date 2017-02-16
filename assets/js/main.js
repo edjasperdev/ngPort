@@ -1,11 +1,11 @@
 var $ = jQuery.noConflict();
 (function($) {
   'use strict';
-    
+
     var $html = $('html');
     var $body = $('body');
-    
-    
+
+
 /*=================================================
 Switch Animation
 =================================================*/
@@ -55,7 +55,7 @@ function fn_switchAnimation() {
       });
     }
   });
-} 
+}
 
 
 /*=================================================
@@ -92,6 +92,5 @@ document on ready
        // alert('hey');
         fn_switchAnimation();
     });
-    
-})(jQuery);
 
+})(jQuery);
