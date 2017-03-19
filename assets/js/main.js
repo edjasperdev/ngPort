@@ -34,13 +34,13 @@ function fn_switchAnimation() {
       $activeSection
       .velocity('stop', true)
       .velocity('transition.slideUpOut', {
-        duration: 1200,
+        duration: 500,
         complete: function() {
           $preloader.velocity('fadeIn', {
-            duration: 800,
+            duration: 500,
             complete: function() {
               $preloader.velocity('fadeOut', {
-                duration: 800,
+                duration: 500,
                 delay: 100,
                 complete: function() {
                   $linkToSection.velocity('transition.slideDownIn', {duration: 1000});
@@ -89,7 +89,6 @@ window on load
 document on ready
 =================================================*/
     $(document).on('ready', function() {
-       // alert('hey');
         fn_switchAnimation();
     });
 

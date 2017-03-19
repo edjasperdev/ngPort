@@ -9,7 +9,7 @@
 }
 
 body {
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	font-family: 'Raleway', sans-serif;
   /*height: 100vh;*/
@@ -20,8 +20,13 @@ a{
 	color: black;
 }
 
+.section-wrap{
+  display: flex;
+}
+
 .container{
 	padding: 10px;
+  height: 100%;
 }
 
 h1.myName {
@@ -75,16 +80,18 @@ h1.myName {
 
 /* Home page */
 .intro {
- 	  position: absolute;
-    top: 40%;
     text-align: right;
-    width: 50%;
-    right: 5%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 50px;
 }
 
 .main-pic{
   background-size: cover;
   width: 50%;
+  /*background: url('./../images/portPic.png');*/
 }
 
 img{
@@ -93,22 +100,23 @@ img{
 
 .intro .myName{
 	font-size: 40px;
-    letter-spacing: 7px;
+  letter-spacing: 7px;
 }
 
 .intro h3{
 	letter-spacing: 2px;
-    /*margin-top: -25px;*/
-    font-weight: 400;
+  font-weight: 400;
 }
 
 /* About page */
 .about {
- 	position: absolute;
-    top: 26%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: right;
     width: 50%;
-    right: 5%;
+    padding-right: 50px;
+
 }
 
 .about h1{
@@ -198,12 +206,19 @@ hr{
 
 /* Contact Page */
 #contact{
-	position: absolute;
-    top: 26%;
-    text-align: right;
-    width: 50%;
-    right: 5%;
-}
+  text-align: right;
+  height: 100%;
+  padding-right: 50px;
+  
+ }
+ #contact .section-wrap{
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+ }
+
+
 
 #contact h1{
 	font-size: 30px;
@@ -223,17 +238,17 @@ hr{
 /*Tablet*/
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  	.main-pic {
+  /*	.main-pic {
 		max-width: 400px;
-	}
+	}*/
 
-	.intro {
+	/*.intro {
 		top: 35%;
 	}
 
 	.about{
 		top: 22%;
-	}
+	}*/
 
 	.port .thumbnail{
 		position: absolute;
@@ -263,13 +278,10 @@ hr{
   and (min-device-width: 320px)
   and (max-device-width: 736px)
   and (orientation: portrait) {
-	.main-pic {
-		max-width: 540px;
-	}
 
-	.about {
-		width: 39%;
-	}
+  #contact{
+    max-height: 750px;
+  }
 }
 
 /*==================================================
